@@ -300,7 +300,6 @@ main .container section .personnages .pers-info img {
 main img:nth-child(2) {
   left: 0;
   width: 100%;
-  border: 1px solid violet;
 }
 
 /* structuration de la section multimédia */
@@ -366,6 +365,16 @@ main .container #multimedia .bottom .img-container {
   margin-bottom: 80px;
 }
 
+main .container #multimedia .bottom .img-container:hover .img1 {
+  box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+}
+
+main .container #multimedia .bottom .img-container:hover .img2 {
+  transform: scale(0.9);
+}
+
 main .container #multimedia .bottom .img1 {
   width: 90%;
   left: 0;
@@ -376,13 +385,9 @@ main .container #multimedia .bottom .img2 {
   position: absolute;
   width: 110px;
   align-self: center;
-  left: 39%;
-  right: 50%;
-  top: 42%;
-}
-
-main .container #multimedia .bottom .img2:hover {
-  transform: scale(0.9);
+  left: 39.2%;
+  right: 55%;
+  top: 41.8%;
 }
 
 /* Structuration formulaire prenons contact */
@@ -467,9 +472,6 @@ main #prenons-con form div.form-group #freq optgroup {
     rgba(140, 135, 135, 1) 10%,
     rgba(25, 88, 125, 1) 57%
   ) !important;
-}
-
-main #prenons-con form div.form-group #freq optgroup option {
 }
 
 /* Flèche dans la case de select */
@@ -574,11 +576,38 @@ footer .container .footer-bottom p {
   font-size: 12px;
 }
 
-footer .container .footer-top .p-container div input[type="radio"] {
-  color: #000000;
-  background-color: #000000;
-  border: none;
+/* structuration des input de type radio */
+
+input[type="radio"] {
+  position: relative;
+  margin: 2px;
 }
+
+input[type="radio"]::before,
+input[type="radio"]::after {
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+}
+
+input[type="radio"]::before {
+  border: 1px solid #00b7e8;
+  background-color: #000000;
+}
+
+input[type="radio"]:checked::after {
+  border: 1px solid #00b7e8;
+  background-color: #00b7e8;
+  transform: scale(0.9);
+}
+
+/* ------- */
 
 footer .container .footer-bottom {
   margin-top: 100px;

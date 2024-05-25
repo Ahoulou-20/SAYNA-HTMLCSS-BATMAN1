@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <title>Accueil</title>
+
 </head>
 
 <body>
     <!-- Début de l'entête  -->
 
     <header>
-        <div class="header-container container x1">
+        <div class="header-container container ">
             <div class="top">
                 <a class="logo-home" href=""><img src="../Assets/Logos/logohome.png" alt=""></a>
                 <a class="home" href="index.html">HOME</a>
@@ -22,8 +23,8 @@
                     les criminels de Gotham City. Il est vengeur. Il est la nuit. </p>
                 <p class="text fade-in">Il est Batman.</p>
                 <div class="btn">
-                    <a href=""><button>VOIR LE HEROS</button></a>
-                    <a href=""><button>LES ADVERSAIRES</button></a>
+                    <a href="#bat-au-cinema"><button>VOIR LE HEROS</button></a>
+                    <a href="#nemesis"><button>LES ADVERSAIRES</button></a>
                 </div>
                 <div class="img-right">
                     <a href=""><img src="../Assets/Logos/logo_bat_flèche.png" alt=""></a>
@@ -73,7 +74,7 @@
                 </div>
             </section>
             <!-- NEMESIS -->
-            <section id="nemesis ">
+            <section id="nemesis">
                 <img class="bt-13" src="../Assets/Illustrations/Bathome13.png" alt="">
                 <h1 class="fade-in">NÉMÉSIS</h1>
                 <p class="text fade-in fade-in">
@@ -169,7 +170,8 @@
                 <div class="bottom">
                     <div class="img-container fade-in">
                         <img src="../Assets/Illustrations/Bathome_ba2.png" alt="" class="img1">
-                        <img src="../Assets/Logos/icon_player.png" alt="" class="img2">
+                        <a href="https://www.youtube.com/watch?v=jXrFsn9pcZY"><img src="../Assets/Logos/icon_player.png"
+                                alt="" class="img2"></a>
                     </div>
                 </div>
 
@@ -191,6 +193,7 @@
                         concernant les <br>
                         aventures de Batman :
                         <input type="checkbox" name="coche" id="coche" required>
+
                     </label>
                     <select id="freq" name="freq">
                         <optgroup label="">
@@ -205,9 +208,9 @@
                     <input type="text" name="news" id="news" placeholder="Souhaitez-vous recevoir des news " required>
                 </div>
                 <div class="form-btn">
-                    <button><a href="#">Des films</a></button>
-                    <button><a href="#">Des comics</a></button>
-                    <button><a href="#">De tout</a></button>
+                    <button type="button" data-theme="films">Des films</button>
+                    <button type="button" data-theme="comics">Des comics</button>
+                    <button type="button" data-theme="tout">De tout</button>
                 </div>
 
                 <div class="form-group">
@@ -233,10 +236,15 @@
                     </p>
                     <p class="text">Le Joker à Batman (2008)</p>
                     <div>
-                        <input type="radio" name="" id=""><input type="radio" name="" id=""><input type="radio" name=""
-                            id=""><input type="radio" name="" id=""><input type="radio" name="" id=""><input
-                            type="radio" name="" id=""><input type="radio" name="" id=""><input type="radio" name=""
-                            id=""><input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input value="checked" type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
+                        <input type="radio" name="" id="">
                     </div>
                 </div>
                 <img src="../Assets/Logos/icon_guillemets_2.png" alt="">

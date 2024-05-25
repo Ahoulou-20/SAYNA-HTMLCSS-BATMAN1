@@ -67,7 +67,9 @@ input[type="submit"] {
   left: 0;
   right: 0;
   overflow: hidden;
-  border: 1px solid blue;
+  border: 0.1px solid #bcbbbd;
+  border-bottom: none;
+  border-top: none;
 }
 
 h1 {
@@ -114,7 +116,7 @@ header .header-container .top {
   padding-right: 4rem;
   padding-bottom: 102px;
   padding-top: 50px;
-  border: 1px solid blue;
+  border-bottom: 1px solid #bcbbbd;
 }
 
 header .header-container .top a.logo-home {
@@ -124,6 +126,8 @@ header .header-container .top a.logo-home {
 header .header-container .top a {
   color: #ffffff;
   text-decoration: none;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 header .header-container .top a.home:hover {
@@ -148,7 +152,6 @@ header .header-container .bottom {
   padding-left: 4rem;
   padding-right: 4rem;
   padding-top: 132px;
-  border: 1px solid blue;
 }
 
 /* structuration des paragraphes en intro */
@@ -199,6 +202,8 @@ header .header-container .bottom .btn button {
   transition: background 0.3s ease;
   border: none;
 }
+
+/* Animation css des boutons */
 
 header .header-container .bottom .btn button:hover {
   background: linear-gradient(
@@ -598,9 +603,16 @@ footer .container .footer-bottom .logo-group img {
   margin-right: 10px;
 }
 
+/* Effets hover sur les boutons dans le pied de page */
+
+footer .container .footer-bottom .logo-group img:hover {
+  filter: brightness(0) saturate(100%) invert(79%) sepia(98%) saturate(579%)
+    hue-rotate(1deg) brightness(91%) contrast(87%);
+}
+
 /* =============================================================== */
 
-/* Animation CSS */
+/* Animation fade-in CSS */
 
 @keyframes fadeIn {
   from {
@@ -614,7 +626,7 @@ footer .container .footer-bottom .logo-group img {
 }
 
 .fade-in {
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 2.5s ease-in-out;
 }
 
 /* ====================================================================================================== */

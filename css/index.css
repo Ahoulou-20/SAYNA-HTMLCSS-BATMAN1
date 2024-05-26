@@ -154,6 +154,10 @@ header .header-container .bottom {
   padding-top: 132px;
 }
 
+header .header-container .bottom .intro-h {
+  text-align: center;
+}
+
 /* structuration des paragraphes en intro */
 
 header .header-container .bottom p:nth-child(1) {
@@ -465,13 +469,14 @@ main #prenons-con form div.form-group #freq {
 
 main #prenons-con form div.form-group #freq optgroup {
   width: 100%;
+  background-color: rgba(25, 88, 125, 1);
   color: #ffffff;
-  background-color: rgba(140, 135, 135, 1) !important;
-  background-image: linear-gradient(
-    140deg,
-    rgba(140, 135, 135, 1) 10%,
-    rgba(25, 88, 125, 1) 57%
-  ) !important;
+  padding: 2rem;
+}
+
+main #prenons-con form div.form-group #freq optgroup option {
+  font-size: 20px;
+  padding: 1.5rem !important;
 }
 
 /* Flèche dans la case de select */
@@ -499,7 +504,17 @@ main #prenons-con form div.form-btn {
 main #prenons-con form div.form-btn > button {
   padding: 6px 4px;
   margin: 10px;
-  background: none;
+  background-color: rgba(140, 135, 135, 1);
+  background-image: linear-gradient(
+    140deg,
+    rgba(140, 135, 135, 1) 10%,
+    rgba(25, 88, 125, 1) 57%
+  );
+  opacity: 0.7;
+}
+
+main #prenons-con form div.form-btn > button:hover {
+  opacity: 1;
 }
 
 main #prenons-con form div.form-btn > button a {
@@ -680,4 +695,80 @@ footer .container .footer-bottom .logo-group img:hover {
 /* Téléphone mobile */
 
 @media screen and (max-width: 480px) {
+  /* Configurations (mises en forme) générales */
+  /* ajout particulier */
+  .text {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .sous-titre {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  a {
+    font-size: 13px;
+  }
+  button,
+  input[type="submit"] {
+    font-size: 14px;
+  }
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  h1 {
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+  /* mise en forme de l'entête */
+  header {
+    height: auto;
+  }
+  header .header-container {
+    height: auto;
+  }
+  /* Haut de l'entête */
+  header .header-container .top {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  /* Bas de l'entête */
+  header .header-container .bottom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  /* structuration des paragraphes en intro */
+  header .header-container .bottom p:nth-child(1) {
+    width: 220px;
+    margin-top: 0;
+  }
+  header .header-container .bottom p:nth-child(2) {
+    margin-top: 0px;
+  }
+  header .header-container .bottom .img-right {
+    right: -2%;
+    top: 10%;
+  }
+  header .header-container .bottom .img-right img {
+    margin-bottom: 1.4px;
+  }
+  /* Boutons en Intro */
+  header .header-container .bottom .btn {
+    flex-direction: column;
+    margin-top: 2px;
+  }
+  header .header-container .bottom .btn button {
+    width: 150px;
+    height: 40px;
+    margin: 0;
+    padding: 6px;
+  }
 }

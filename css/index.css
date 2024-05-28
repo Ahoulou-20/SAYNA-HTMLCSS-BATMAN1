@@ -322,7 +322,6 @@ main .container #multimedia .top {
 main .container #multimedia .top .multi-info {
   display: flex;
   padding: 0;
-  border: 1px solid pink;
   height: 230px;
   border-radius: 10px;
   background-color: rgba(140, 135, 135, 1);
@@ -543,6 +542,35 @@ main #prenons-con form input[type="submit"]:hover {
   );
 }
 
+/* pop-up box */
+
+main #prenons-con form .pop-up {
+  margin-top: 20px;
+  width: 300px;
+  height: 350px;
+  background-color: rgba(140, 135, 135, 1);
+  background-image: linear-gradient(
+    140deg,
+    rgba(140, 135, 135, 1) 10%,
+    rgba(25, 88, 125, 1) 57%
+  );
+  margin: auto;
+}
+
+main #prenons-con form .pop-up .pop-up-text {
+  border: 1px solid #00b7e8;
+  background: transparent;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+main #prenons-con form .pop-up .pop-up-text p.text {
+  text-align: center;
+  margin: auto;
+}
+
 /* pied de page */
 
 footer {
@@ -699,11 +727,13 @@ footer .container .footer-bottom .logo-group img:hover {
   /* ajout particulier */
   .text {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
   }
   .sous-titre {
     font-size: 12px;
     margin-top: 5px;
+    margin-bottom: 5px;
   }
   a {
     font-size: 13px;
@@ -711,16 +741,18 @@ footer .container .footer-bottom .logo-group img:hover {
   button,
   input[type="submit"] {
     font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .container {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   h1 {
     font-size: 20px;
     font-style: normal;
     margin-top: 10px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
   /* mise en forme de l'entête */
   header {
@@ -737,28 +769,31 @@ footer .container .footer-bottom .logo-group img:hover {
     justify-content: space-between;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 30px;
-    padding-top: 10px;
   }
   /* Bas de l'entête */
   header .header-container .bottom {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 40px;
   }
   /* structuration des paragraphes en intro */
   header .header-container .bottom p:nth-child(1) {
     width: 220px;
     margin-top: 0;
+    margin-bottom: 8px;
   }
   header .header-container .bottom p:nth-child(2) {
-    margin-top: 0px;
+    margin-top: 2px;
+    margin-bottom: 8px;
   }
   header .header-container .bottom .img-right {
-    right: -2%;
-    top: 10%;
+    right: 0%;
+    top: 20%;
   }
   header .header-container .bottom .img-right img {
-    margin-bottom: 1.4px;
+    margin-bottom: 8px;
+    width: 40px;
+    height: 28px;
   }
   /* Boutons en Intro */
   header .header-container .bottom .btn {
@@ -768,7 +803,340 @@ footer .container .footer-bottom .logo-group img:hover {
   header .header-container .bottom .btn button {
     width: 150px;
     height: 40px;
-    margin: 0;
+    margin: 10px;
     padding: 6px;
+  }
+  header .header-container .bottom .btn button a {
+    width: 160px;
+  }
+  /* Structuration du contenu principal */
+  main .container .fleche-dwn {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  /* Section commune à cineme, némésis et alliés */
+  main .container section {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+  main .container section > p {
+    width: 280px;
+    margin-bottom: 40px;
+  }
+  main .container section .personnages {
+    display: grid;
+    grid-template-columns: 220px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  /* Structuration du contenu principal -> structuration de chaque éléments images nom et année */
+  main .container section .personnages .pers-info img {
+    height: 250px;
+  }
+  /* Affichage de l'image au dessus du titre némésis */
+  .bt-13 {
+    width: 80px;
+    transform: translate(60%, -50%);
+  }
+  /* Affichage de l'image au dessus du titre alliés */
+  .bt-12 {
+    transform: translateY(-65%);
+    height: 100px;
+    width: 110px;
+  }
+  /* structuration de la section multimédia */
+  main .container #multimedia {
+    width: 100%;
+  }
+  main .container #multimedia .top {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+  main .container #multimedia .top .multi-info {
+    display: flex;
+    padding: 0;
+    border: 1px solid pink;
+    height: 230px;
+    border-radius: 10px;
+    background-color: rgba(140, 135, 135, 1);
+    background-image: linear-gradient(
+      140deg,
+      rgba(140, 135, 135, 1) 10%,
+      rgba(25, 88, 125, 1) 57%
+    );
+  }
+  main .container #multimedia .top .multi-info .image img {
+    height: 100%;
+  }
+  main .container #multimedia .top .multi-info .multi-info-text {
+    height: 99%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  main .container #multimedia .top .multi-info .multi-info-text p {
+    width: 350px;
+    font-size: 12px;
+    padding: 0;
+  }
+  main .container #multimedia .top .multi-info p span {
+    color: #ffff00;
+  }
+  main .container #multimedia .top div .fleche-left,
+  main .container #multimedia .top div .fleche-right {
+    margin-top: 100px;
+  }
+  /* Bas de page de la partie multimédia */
+  main .container #multimedia .bottom .img-container {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  main .container #multimedia .bottom .img-container:hover .img1 {
+    box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+    -moz-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+  }
+  main .container #multimedia .bottom .img-container:hover .img2 {
+    transform: scale(0.9);
+  }
+  main .container #multimedia .bottom .img1 {
+    width: 90%;
+    left: 0;
+    margin-top: 30px;
+  }
+  main .container #multimedia .bottom .img2 {
+    position: absolute;
+    width: 110px;
+    align-self: center;
+    left: 39.2%;
+    right: 55%;
+    top: 41.8%;
+  }
+  /* Structuration formulaire prenons contact */
+  main #prenons-con {
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(140, 135, 135, 1);
+    background-image: linear-gradient(
+      140deg,
+      rgba(140, 135, 135, 1) 10%,
+      rgba(25, 88, 125, 1) 57%
+    );
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+  }
+  main #prenons-con form {
+    margin: auto;
+    width: 50vw;
+    align-items: flex-start;
+    padding: 10px;
+  }
+  main #prenons-con form div.form-group {
+    border-bottom: 2px solid gray;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  main #prenons-con form div.form-group label.sous-titre {
+    display: block;
+    margin-bottom: 10px;
+  }
+  main #prenons-con form div.form-group input[type="text"] {
+    width: 100%;
+    height: 20px;
+    padding: 0 2px;
+    margin: 0;
+    padding-bottom: 0;
+    background: none;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+  }
+  main #prenons-con form div.form-group label.l-coche {
+    color: gray;
+  }
+  main #prenons-con form div.form-group label.l-coche > input[type="checkbox"] {
+    height: 18px;
+    width: 18px;
+    transform: translateY(30%);
+    border: none;
+    outline: none;
+  }
+  main #prenons-con form div.form-group #freq {
+    width: 100%;
+    height: 30px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid gray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    color: gray;
+  }
+  main #prenons-con form div.form-group #freq optgroup {
+    width: 100%;
+    background-color: rgba(25, 88, 125, 1);
+    color: #ffffff;
+    padding: 2rem;
+  }
+  main #prenons-con form div.form-group #freq optgroup option {
+    font-size: 20px;
+    padding: 1.5rem !important;
+  }
+  /* Flèche dans la case de select */
+  main #prenons-con form div.form-group #freq {
+    /* Déclaration de la taille du bouton déroulant */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 30px;
+    background-image: url("../Assets/Logos/icon_flèche_3.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    cursor: pointer;
+  }
+  main #prenons-con form div.form-btn {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main #prenons-con form div.form-btn > button {
+    padding: 6px 4px;
+    margin: 10px;
+    background-color: rgba(140, 135, 135, 1);
+    background-image: linear-gradient(
+      140deg,
+      rgba(140, 135, 135, 1) 10%,
+      rgba(25, 88, 125, 1) 57%
+    );
+    opacity: 0.7;
+  }
+  main #prenons-con form div.form-btn > button:hover {
+    opacity: 1;
+  }
+  main #prenons-con form div.form-btn > button a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  main #prenons-con form input[type="submit"] {
+    width: 230px;
+    height: 55px;
+    padding: 8px;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4),
+      rgba(177, 19, 19, 0.4)
+    );
+    transition: 0.3s ease;
+    border: none;
+  }
+  main #prenons-con form input[type="submit"]:hover {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(177, 19, 19, 1)
+    );
+  }
+  /* pied de page */
+  footer {
+    background-color: #000000;
+    margin: 0;
+    bottom: 0;
+  }
+  footer .container {
+    padding-top: 90px;
+    height: 130vh;
+  }
+  footer .container .footer-top {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  footer .container .footer-top img {
+    width: 100px;
+    height: 100px;
+  }
+  footer .container .footer-top img:nth-child(3) {
+    margin-top: 300px;
+  }
+  footer .container .footer-top .p-container {
+    padding-top: 140px;
+    padding-bottom: 120px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  footer .container .footer-top .p-container p:nth-child(1),
+  footer .container .footer-top .p-container p:nth-child(3) {
+    margin-bottom: 20px;
+  }
+  footer .container .footer-top .p-container p:nth-child(2),
+  footer .container .footer-top .p-container p:nth-child(3),
+  footer .container .footer-bottom p {
+    font-size: 12px;
+  }
+  /* structuration des input de type radio */
+  input[type="radio"] {
+    position: relative;
+    margin: 2px;
+  }
+  input[type="radio"]::before,
+  input[type="radio"]::after {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+  }
+  input[type="radio"]::before {
+    border: 1px solid #00b7e8;
+    background-color: #000000;
+  }
+  input[type="radio"]:checked::after {
+    border: 1px solid #00b7e8;
+    background-color: #00b7e8;
+    transform: scale(0.9);
+  }
+  /* ------- */
+  footer .container .footer-bottom {
+    margin-top: 100px;
+    margin: auto;
+    text-align: center;
+  }
+  footer .container .footer-bottom p > img {
+    transform: translateY(30%);
+    margin-right: 15px;
+  }
+  footer .container .footer-bottom .logo-group {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .container .footer-bottom .logo-group img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /* Effets hover sur les boutons dans le pied de page */
+  footer .container .footer-bottom .logo-group img:hover {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(98%) saturate(579%)
+      hue-rotate(1deg) brightness(91%) contrast(87%);
   }
 }

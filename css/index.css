@@ -251,8 +251,11 @@ main .container section > p {
 
 main .container section .personnages {
   display: grid;
-  grid-template-columns: repeat(3, 280px);
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 92%;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 /* Structuration du contenu principal -> structuration de chaque éléments images nom et année */
@@ -397,7 +400,7 @@ main .container #multimedia .bottom .img2 {
 
 main #prenons-con {
   width: 100%;
-  height: 120vh;
+  height: 122vh;
   background-color: rgba(140, 135, 135, 1);
   background-image: linear-gradient(
     140deg,
@@ -521,20 +524,23 @@ main #prenons-con form div.form-btn > button a {
   color: #ffffff;
 }
 
-main #prenons-con form input[type="submit"] {
-  width: 230px;
+main #prenons-con form .pop-up-btn > button {
+  width: 225px;
   height: 55px;
+  margin: 15px;
   padding: 8px;
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 0.4),
     rgba(177, 19, 19, 0.4)
   );
-  transition: 0.3s ease;
+  transition: background 0.3s ease;
   border: none;
 }
 
-main #prenons-con form input[type="submit"]:hover {
+/* Animation css des boutons */
+
+main #prenons-con form .pop-up-btn > button:hover {
   background: linear-gradient(
     to right,
     rgba(255, 255, 255, 1),
@@ -545,9 +551,10 @@ main #prenons-con form input[type="submit"]:hover {
 /* pop-up box */
 
 main #prenons-con form .pop-up {
-  margin-top: 20px;
-  width: 300px;
-  height: 350px;
+  position: relative;
+  transform: translateY(-200%);
+  width: 500px;
+  height: 40vh;
   background-color: rgba(140, 135, 135, 1);
   background-image: linear-gradient(
     140deg,
@@ -555,20 +562,41 @@ main #prenons-con form .pop-up {
     rgba(25, 88, 125, 1) 57%
   );
   margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 main #prenons-con form .pop-up .pop-up-text {
+  position: absolute;
+  background-color: rgba(140, 135, 135, 1);
+  background-image: linear-gradient(
+    140deg,
+    rgba(140, 135, 135, 1) 10%,
+    rgba(25, 88, 125, 1) 57%
+  );
+  box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+  -moz-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
+  width: 60%;
+  height: 60%;
+  text-align: center;
   border: 1px solid #00b7e8;
-  background: transparent;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  border-radius: 10px;
+  top: 18%;
+  left: 20%;
 }
 
 main #prenons-con form .pop-up .pop-up-text p.text {
   text-align: center;
-  margin: auto;
+  margin-top: 50px;
+}
+
+#pop-up {
+  display: none;
+}
+
+#pop-up:target {
+  display: block;
 }
 
 /* pied de page */
@@ -769,12 +797,15 @@ footer .container .footer-bottom .logo-group img:hover {
     justify-content: space-between;
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-top: 20px;
+    padding-bottom: 50px;
   }
   /* Bas de l'entête */
   header .header-container .bottom {
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
   /* structuration des paragraphes en intro */
   header .header-container .bottom p:nth-child(1) {
@@ -804,7 +835,7 @@ footer .container .footer-bottom .logo-group img:hover {
     width: 150px;
     height: 40px;
     margin: 10px;
-    padding: 6px;
+    padding: 8px;
   }
   header .header-container .bottom .btn button a {
     width: 160px;
@@ -823,17 +854,9 @@ footer .container .footer-bottom .logo-group img:hover {
     width: 280px;
     margin-bottom: 40px;
   }
-  main .container section .personnages {
-    display: grid;
-    grid-template-columns: 220px;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
   /* Structuration du contenu principal -> structuration de chaque éléments images nom et année */
-  main .container section .personnages .pers-info img {
-    height: 250px;
+  main .container section .personnages {
+    grid-template-columns: 1fr;
   }
   /* Affichage de l'image au dessus du titre némésis */
   .bt-13 {
@@ -847,296 +870,116 @@ footer .container .footer-bottom .logo-group img:hover {
     width: 110px;
   }
   /* structuration de la section multimédia */
-  main .container #multimedia {
-    width: 100%;
-  }
   main .container #multimedia .top {
-    display: flex;
     justify-content: space-evenly;
-    padding-top: 50px;
-    margin-bottom: 30px;
+    padding-top: 20px;
+    margin-bottom: 20px;
   }
   main .container #multimedia .top .multi-info {
-    display: flex;
-    padding: 0;
-    border: 1px solid pink;
-    height: 230px;
-    border-radius: 10px;
-    background-color: rgba(140, 135, 135, 1);
-    background-image: linear-gradient(
-      140deg,
-      rgba(140, 135, 135, 1) 10%,
-      rgba(25, 88, 125, 1) 57%
-    );
+    height: 320px;
+    width: 90%;
+  }
+  main .container #multimedia .top .multi-info .image {
+    width: 40%;
   }
   main .container #multimedia .top .multi-info .image img {
-    height: 100%;
+    width: 100%;
   }
   main .container #multimedia .top .multi-info .multi-info-text {
-    height: 99%;
-    padding: 15px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 60%;
   }
   main .container #multimedia .top .multi-info .multi-info-text p {
-    width: 350px;
-    font-size: 12px;
-    padding: 0;
-  }
-  main .container #multimedia .top .multi-info p span {
-    color: #ffff00;
-  }
-  main .container #multimedia .top div .fleche-left,
-  main .container #multimedia .top div .fleche-right {
-    margin-top: 100px;
+    width: auto;
+    font-size: 10px;
+    text-align: justify;
   }
   /* Bas de page de la partie multimédia */
-  main .container #multimedia .bottom .img-container {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
-  }
-  main .container #multimedia .bottom .img-container:hover .img1 {
-    box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
-    -webkit-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
-    -moz-box-shadow: 0px 0px 10px 10px rgba(188, 187, 189, 0.75);
-  }
-  main .container #multimedia .bottom .img-container:hover .img2 {
-    transform: scale(0.9);
-  }
-  main .container #multimedia .bottom .img1 {
-    width: 90%;
-    left: 0;
-    margin-top: 30px;
-  }
   main .container #multimedia .bottom .img2 {
-    position: absolute;
-    width: 110px;
-    align-self: center;
-    left: 39.2%;
+    width: 38px;
+    left: 38.8%;
     right: 55%;
-    top: 41.8%;
+    top: 44.8%;
   }
   /* Structuration formulaire prenons contact */
-  main #prenons-con {
-    width: 100%;
-    height: 120vh;
-    background-color: rgba(140, 135, 135, 1);
-    background-image: linear-gradient(
-      140deg,
-      rgba(140, 135, 135, 1) 10%,
-      rgba(25, 88, 125, 1) 57%
-    );
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-  }
   main #prenons-con form {
-    margin: auto;
-    width: 50vw;
-    align-items: flex-start;
-    padding: 10px;
-  }
-  main #prenons-con form div.form-group {
-    border-bottom: 2px solid gray;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-    text-align: left;
-  }
-  main #prenons-con form div.form-group label.sous-titre {
-    display: block;
-    margin-bottom: 10px;
-  }
-  main #prenons-con form div.form-group input[type="text"] {
-    width: 100%;
-    height: 20px;
-    padding: 0 2px;
-    margin: 0;
-    padding-bottom: 0;
-    background: none;
-    border: none;
-    outline: none;
-    transition: 0.5s;
-  }
-  main #prenons-con form div.form-group label.l-coche {
-    color: gray;
-  }
-  main #prenons-con form div.form-group label.l-coche > input[type="checkbox"] {
-    height: 18px;
-    width: 18px;
-    transform: translateY(30%);
-    border: none;
-    outline: none;
-  }
-  main #prenons-con form div.form-group #freq {
-    width: 100%;
-    height: 30px;
-    background: none;
-    outline: none;
-    border: none;
-    border-bottom: 2px solid gray;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-top: 10px;
-    color: gray;
-  }
-  main #prenons-con form div.form-group #freq optgroup {
-    width: 100%;
-    background-color: rgba(25, 88, 125, 1);
-    color: #ffffff;
-    padding: 2rem;
-  }
-  main #prenons-con form div.form-group #freq optgroup option {
-    font-size: 20px;
-    padding: 1.5rem !important;
-  }
-  /* Flèche dans la case de select */
-  main #prenons-con form div.form-group #freq {
-    /* Déclaration de la taille du bouton déroulant */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-right: 30px;
-    background-image: url("../Assets/Logos/icon_flèche_3.png");
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 20px;
-    cursor: pointer;
+    width: 90%;
+    padding: 6px;
   }
   main #prenons-con form div.form-btn {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
   }
-  main #prenons-con form div.form-btn > button {
-    padding: 6px 4px;
-    margin: 10px;
-    background-color: rgba(140, 135, 135, 1);
-    background-image: linear-gradient(
-      140deg,
-      rgba(140, 135, 135, 1) 10%,
-      rgba(25, 88, 125, 1) 57%
-    );
-    opacity: 0.7;
+  main #prenons-con form .pop-up-btn > button {
+    width: 150px;
+    height: 45px;
+    margin: 15px;
+    padding: 6px;
   }
-  main #prenons-con form div.form-btn > button:hover {
-    opacity: 1;
+  /* pop-up box */
+  main #prenons-con form .pop-up {
+    width: 80%;
   }
-  main #prenons-con form div.form-btn > button a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-  main #prenons-con form input[type="submit"] {
-    width: 230px;
-    height: 55px;
-    padding: 8px;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.4),
-      rgba(177, 19, 19, 0.4)
-    );
-    transition: 0.3s ease;
-    border: none;
-  }
-  main #prenons-con form input[type="submit"]:hover {
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1),
-      rgba(177, 19, 19, 1)
-    );
+  main #prenons-con form .pop-up .pop-up-text p.text {
+    margin-top: 40px;
   }
   /* pied de page */
-  footer {
-    background-color: #000000;
-    margin: 0;
-    bottom: 0;
-  }
   footer .container {
-    padding-top: 90px;
-    height: 130vh;
+    padding-top: 30px;
+    height: 90vh;
   }
   footer .container .footer-top {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
   }
   footer .container .footer-top img {
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
   }
   footer .container .footer-top img:nth-child(3) {
-    margin-top: 300px;
+    margin-top: 320px;
   }
   footer .container .footer-top .p-container {
-    padding-top: 140px;
-    padding-bottom: 120px;
-    margin-left: 50px;
-    margin-right: 50px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   footer .container .footer-top .p-container p:nth-child(1),
   footer .container .footer-top .p-container p:nth-child(3) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   footer .container .footer-top .p-container p:nth-child(2),
   footer .container .footer-top .p-container p:nth-child(3),
   footer .container .footer-bottom p {
-    font-size: 12px;
+    text-align: center;
   }
   /* structuration des input de type radio */
   input[type="radio"] {
-    position: relative;
     margin: 2px;
-  }
-  input[type="radio"]::before,
-  input[type="radio"]::after {
-    display: block;
-    position: absolute;
-    box-sizing: border-box;
-    bottom: 0;
-    left: 0;
-    content: "";
-    width: 1rem;
-    height: 1rem;
-    border-radius: 1rem;
-  }
-  input[type="radio"]::before {
-    border: 1px solid #00b7e8;
-    background-color: #000000;
-  }
-  input[type="radio"]:checked::after {
-    border: 1px solid #00b7e8;
-    background-color: #00b7e8;
-    transform: scale(0.9);
+    width: 10px;
+    height: 10px;
   }
   /* ------- */
   footer .container .footer-bottom {
-    margin-top: 100px;
-    margin: auto;
-    text-align: center;
-  }
-  footer .container .footer-bottom p > img {
-    transform: translateY(30%);
-    margin-right: 15px;
-  }
-  footer .container .footer-bottom .logo-group {
     margin-top: 30px;
+  }
+  footer .container .footer-bottom .text {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 50px;
   }
-  footer .container .footer-bottom .logo-group img {
-    margin-left: 10px;
-    margin-right: 10px;
+  footer .container .footer-bottom .logo-group {
+    margin-top: 15px;
+  }
+  footer .container .footer-bottom img {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 30px;
   }
   /* Effets hover sur les boutons dans le pied de page */
-  footer .container .footer-bottom .logo-group img:hover {
-    filter: brightness(0) saturate(100%) invert(79%) sepia(98%) saturate(579%)
-      hue-rotate(1deg) brightness(91%) contrast(87%);
-  }
 }

@@ -176,9 +176,9 @@ header .header-container .bottom .img-right {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   right: 3.9%;
-  top: 55%;
+  top: 50%;
 }
 
 header .header-container .bottom .img-right img {
